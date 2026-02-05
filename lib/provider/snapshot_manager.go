@@ -22,6 +22,8 @@ type SnapshotManager interface {
 	// Create the snapshot on the volume
 	CreateSnapshot(sourceVolumeID string, snapshotParameters SnapshotParameters) (*Snapshot, error)
 
+	CreateSnapshotWithClassParams(sourceVolumeID string, snapshotParameters SnapshotParameters, snapshotClassParams map[string]string) (*Snapshot, error)
+
 	// Delete the snapshot
 	DeleteSnapshot(*Snapshot) error
 
