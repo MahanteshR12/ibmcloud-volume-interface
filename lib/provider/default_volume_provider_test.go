@@ -114,7 +114,7 @@ func TestOrderSnapshot(t *testing.T) {
 func TestCreateSnapshot(t *testing.T) {
 	ccf := &DefaultVolumeProvider{sess: nil}
 
-	snapshot, _ := ccf.CreateSnapshot("vol-id", SnapshotParameters{}, nil)
+	snapshot, _ := ccf.CreateSnapshot("vol-id", SnapshotParameters{})
 	assert.Nil(t, snapshot)
 }
 
