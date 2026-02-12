@@ -170,7 +170,7 @@ type SnapshotParameters struct {
 	SnapshotTags SnapshotTags `json:"tags,omitempty"`
 
 	// ResourceGroup is the resourceGroupID
-	ResourceGroup *string `json:"resourceGroup,omitempty"`
+	ResourceGroup string `json:"resourceGroup,omitempty"`
 }
 
 // UpdatePVC ...
