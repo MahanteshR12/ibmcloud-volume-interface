@@ -1,12 +1,12 @@
 module github.com/IBM/ibmcloud-volume-interface
 
-go 1.25.9
+go 1.25.10
 
 require (
 	github.com/BurntSushi/toml v1.0.0
 	github.com/IBM-Cloud/ibm-cloud-cli-sdk v0.6.7
-	github.com/IBM/secret-common-lib v1.1.15-0.20260428134409-f4f9ea8955aa
-	github.com/IBM/secret-utils-lib v1.1.16-0.20260428134227-f2f888ea0a61
+	github.com/IBM/secret-common-lib v1.1.15
+	github.com/IBM/secret-utils-lib v1.1.16
 	github.com/golang-jwt/jwt/v4 v4.5.2
 	github.com/kelseyhightower/envconfig v1.4.0
 	github.com/prometheus/client_golang v1.7.1
