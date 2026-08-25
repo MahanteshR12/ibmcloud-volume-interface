@@ -32,8 +32,10 @@ func TestGroupSnapshotFakesImplementManager(t *testing.T) {
 
 func TestFakeSessionDeleteGroupSnapshotCapturesSnapshotIDs(t *testing.T) {
 	fakeSession := &providerfake.FakeSession{}
+	snapshotIDs := []string{"snapshot-id-1", "snapshot-id-2"}
 
-	assert.Nil(t, fakeSession.DeleteGroupSnapshot("group-snapshot-id", []string{"snapshot-id-1", "snapshot-id-2"}))
+	assert.Nil(t, fakeSession.DeleteGroupSnapshot("group-snapshot-id", snapshotIDs))
+	snapshotIDs[0] = "mutated-snapshot-id"
 
 	groupSnapshotID, snapshotIDs := fakeSession.DeleteGroupSnapshotArgsForCall(0)
 	assert.Equal(t, "group-snapshot-id", groupSnapshotID)
